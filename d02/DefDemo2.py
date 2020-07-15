@@ -13,3 +13,5 @@ def getBMI(h, w):
     resultText = verifyBMI(bmi)
     return bmi, resultText
 
+bmi, resultText = getBMI(170, 60)
+print("%.2f %s" % (bmi, resultText))
