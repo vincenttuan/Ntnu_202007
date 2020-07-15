@@ -4,4 +4,7 @@ def f(n):
     else:
         return f(n-1) + f(n-2)
 
-print(f(6))
+
+# 主程式(程式進入點)
+if __name__ == '__main__':
+    print(f(6))
