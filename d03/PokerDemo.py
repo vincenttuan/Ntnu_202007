@@ -19,3 +19,7 @@ for i in range(0, 1000):
     poker = shuffle(poker)
 
 print(poker)
+
+# 內鍵洗牌
+r.shuffle(poker)
+print(poker)
