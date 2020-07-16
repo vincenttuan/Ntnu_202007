@@ -15,7 +15,7 @@ def menu():
         h = float(input('請輸入身高:'))
         w = float(input('請輸入體重:'))
         bmi = w / ((h/100)**2)
-        print("%.2f", bmi)
+        print("%.2f" % bmi)
         menu()
     elif id == 2:
         print("謝謝使用")
