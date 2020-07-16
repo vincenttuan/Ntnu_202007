@@ -56,18 +56,18 @@ def getWinner(user, pc):
         return None
 
     if user_score <= 10.5 and pc_score > 10.5:
-        return 'user'
+        return 'user win'
 
     if user_score > 10.5 and pc_score <= 10.5:
-        return 'pc'
+        return 'pc win'
 
     if user_score == pc_score :
         return 'Equal'
 
     if user_score > pc_score:
-        return 'user'
+        return 'user win'
     else:
-        return 'pc'
+        return 'pc win'
 
 # 程式開始
 # 洗牌
