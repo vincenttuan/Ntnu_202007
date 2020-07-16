@@ -7,3 +7,9 @@ for item in items:
 
 for (i, item) in enumerate(items):
     print(i, item)
+
+# 計算總和
+sum = 0
+for item in items:
+    sum += item  # 累加, 相當於 sum = sum + item
+print(sum)
