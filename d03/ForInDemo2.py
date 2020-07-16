@@ -13,3 +13,7 @@ sum = 0
 for item in items:
     sum += item  # 累加, 相當於 sum = sum + item
 print(sum)
+
+# 計算平均
+avg = sum / len(items)
+print(len(items), sum, avg)
