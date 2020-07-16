@@ -35,6 +35,4 @@ def getBMI(h, w):
     bmi = w / ((h / 100) ** 2)
     return bmi
 
-# 主程式
-if __name__ == '__main__':
-    menu()
+
