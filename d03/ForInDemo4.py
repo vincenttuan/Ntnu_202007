@@ -7,6 +7,8 @@ for key in emps:
         name = key
         min = salary
 print(name, min)
+
+
 # 薪資最高
 name, max = '', 0
 for key in emps:
