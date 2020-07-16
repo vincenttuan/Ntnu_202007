@@ -69,6 +69,7 @@ def getWinner(user, pc):
     else:
         return 'pc'
 
+# 程式開始
 # 洗牌
 r.shuffle(poker)
 
@@ -76,7 +77,13 @@ r.shuffle(poker)
 user = []
 user.append(poker.pop(0))
 while True:
-    print('user: ', user, getScore(user))
+    score = getScore(user);
+    print('user: ', user, score)
+    if(score > 10.5):
+        print("爆了")
+        break
+    elif(score == 10.5):
+        break
     flag = int(input('是否要牌?(0:不要, 1:要)'))
     if flag == 0:
         break
