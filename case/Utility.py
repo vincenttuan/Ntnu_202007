@@ -27,5 +27,7 @@ def getSD(items):
     return sd
 
 
-def getCV(sd, avg):
+def getCV(items):
+    avg = getAvg(items)
+    sd = getSD(items)
     return sd / avg
