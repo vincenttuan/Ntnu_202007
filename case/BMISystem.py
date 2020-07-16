@@ -13,6 +13,7 @@ def menu():
     print("--------------")
     choice()
 
+# 系統運作流程
 def choice():
     id = int(input('請輸入選項:'))
     if id == 1:
@@ -29,6 +30,7 @@ def choice():
         print("輸入錯誤請重新輸入")
         menu()
 
+# 系統商業邏輯運算
 def getBMI(h, w):
     bmi = w / ((h / 100) ** 2)
     return bmi
