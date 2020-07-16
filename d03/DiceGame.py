@@ -26,15 +26,32 @@ def menu():
 
 def play(id):
     global bet
+    global balance
     if(id == 1):     # 設定下注金額
         print("修改前下注金額:", bet)
         money = int(input('請設定金額:'))
         bet = money
         print("修改後下注金額:", bet)
     elif(id == 2):   # 比大
-        pass
+        pc_sum, user_sum = getSum()
+        if(user_sum > pc_sum):
+            print("比大 You Win", pc_sum, user_sum)
+            balance += bet
+        elif(user_sum < pc_sum):
+            print("比大 You Lose", pc_sum, user_sum)
+            balance -= bet
+        else:
+            print("平手", pc_sum, user_sum)
     elif (id == 3):  # 比小
-        pass
+        pc_sum, user_sum = getSum()
+        if (user_sum < pc_sum):
+            print("比小 You Win", pc_sum, user_sum)
+            balance += bet
+        elif (user_sum > pc_sum):
+            print("比小 You Lose", pc_sum, user_sum)
+            balance -= bet
+        else:
+            print("平手", pc_sum, user_sum)
     elif (id == 4):  # 查詢餘額
         print("餘額:", balance)
 
