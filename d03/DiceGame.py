@@ -21,7 +21,7 @@ def menu():
     print("4.查詢餘額")
     print("5.Exit")
     print("-------------")
-    id = int(input('請選擇'))
+    id = int(input('請選擇:'))
     play(id)
 
 def play(id):
