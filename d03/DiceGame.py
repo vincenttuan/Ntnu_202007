@@ -1,4 +1,5 @@
 import random as r
+import sys
 
 balance = 100  # 本金
 bet = 10  # 下注金額
@@ -19,6 +20,30 @@ def menu():
     print("3.比小")
     print("4.查詢餘額")
     print("5.Exit")
+    print("-------------")
+    id = int(input('請選擇'))
+    play(id)
+
+def play(id):
+    global bet
+    if(id == 1):     # 設定下注金額
+        print("修改前下注金額:", bet)
+        money = int(input('請設定金額:'))
+        bet = money
+        print("修改後下注金額:", bet)
+    elif(id == 2):   # 比大
+        pass
+    elif (id == 3):  # 比小
+        pass
+    elif (id == 4):  # 查詢餘額
+        print("餘額:", balance)
+
+    elif (id == 5):  # Exit
+        return
+
+    print("按下 Enter 鍵繼續")
+    sys.stdin.read(1)
+    menu()
 
 if __name__ == '__main__':
     menu()
