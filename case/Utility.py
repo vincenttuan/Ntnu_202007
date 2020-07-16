@@ -4,7 +4,7 @@ import math
 1.getSum(items)  取得總和
 2.getAvg(items)  取得平均
 3.getSD(items)   取得標準差
-4.getCV(sd, avg) 取得變異係數
+4.getCV(items) 取得變異係數
 '''
 def getSum(items):
     sum = 0
