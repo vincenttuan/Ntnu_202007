@@ -1,5 +1,8 @@
 import random as r
 
+balance = 100  # 本金
+bet = 10  # 下注金額
+
 def getSum():
     d1 = [1, 2, 3, 4, 5, 6]
     d2 = [1, 2, 3, 4, 5, 6]
