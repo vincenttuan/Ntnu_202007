@@ -12,9 +12,11 @@ def getSum(items):
         sum += item
     return sum
 
+
 def getAvg(items):
     avg = getSum(items) / len(items)
     return avg
+
 
 def getSD(items):
     sum = 0
@@ -23,6 +25,7 @@ def getSD(items):
         sum += math.pow(item - avg, 2)
     sd = math.sqrt(sum / len(items))
     return sd
+
 
 def getCV(sd, avg):
     return sd / avg
