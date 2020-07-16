@@ -15,7 +15,7 @@ def shuffle(poker):
     poker[n2] = p1
     return poker
 
-for i in range(0, 10000):
+for i in range(0, 1000):
     poker = shuffle(poker)
 
 print(poker)
