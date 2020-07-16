@@ -21,7 +21,7 @@ def choice():
         w = float(input('請輸入體重:'))
         bmi = getBMI(h, w)
         print("%.2f" % bmi)
-        print('按下任意鍵繼續...')
+        print('按下Enter鍵繼續...')
         sys.stdin.read(1)
         menu()
     elif id == 2:
