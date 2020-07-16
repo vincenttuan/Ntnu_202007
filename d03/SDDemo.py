@@ -20,4 +20,7 @@ def getSD(scores):
 scores1 = [40, 70, 100]
 scores2 = [10, 15, 20]
 
-print(getSD(scores1), getSD(scores2))
+sd1 = getSD(scores1)
+sd2 = getSD(scores2)
+print(sd1, sd2)
+print("scores1" if sd1<sd2 else "scores2", "集中度高")
