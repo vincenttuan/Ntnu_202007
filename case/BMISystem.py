@@ -1,3 +1,4 @@
+import sys
 '''
 使用者可選擇是否要輸入身高,體重等資訊
 使用者可以離開系統
@@ -16,6 +17,8 @@ def menu():
         w = float(input('請輸入體重:'))
         bmi = w / ((h/100)**2)
         print("%.2f" % bmi)
+        print('按下任意鍵繼續...')
+        sys.stdin.read(1)
         menu()
     elif id == 2:
         print("謝謝使用")
