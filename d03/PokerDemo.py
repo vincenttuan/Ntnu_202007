@@ -6,3 +6,4 @@ print(poker)
 # 排序
 poker.sort()
 print(poker)
+# 洗牌(Shuffle)
