@@ -8,10 +8,14 @@ print(poker)
 poker.sort()
 print(poker)
 # 洗牌(Shuffle)
+def shuffle(poker):
+    n1, n2 = r.randint(0, len(poker)-1), r.randint(0, len(poker)-1)
+    p1 = poker[n1]
+    poker[n1] = poker[n2]
+    poker[n2] = p1
+    return poker
 
-n1, n2 = r.randint(0, len(poker)-1), r.randint(0, len(poker)-1)
-p1 = poker[n1]
-poker[n1] = poker[n2]
-poker[n2] = p1
+for i in range(0, 10000):
+    poker = shuffle(poker)
+
 print(poker)
-#for i in range(0, 10000):
