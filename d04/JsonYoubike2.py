@@ -18,7 +18,8 @@ for i in range(1, 405):
         lng = float(youbike['lng'])
         d = gcd.cal_dis_meters(25.027951, 121.528596, lat, lng)
         if(int(youbike['sbi']) >= sbi and int(youbike['bemp']) >= bemp and d <= max_d):
-            print('%.2fm' % d, youbike)
+            #print('%.2fm' % d, youbike)
+            print('%.2fm' % d, youbike['sna'], youbike['sbi'], youbike['bemp'])
     except:
         #print('無此站台', sno)
         pass
