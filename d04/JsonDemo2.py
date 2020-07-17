@@ -11,4 +11,5 @@ for u in user:
     if u['name'] == 'Mary':
         print(u['salary'])
 
-print([u['salary'] for u in user if u['name'] == 'Mary'])
+a = [u['salary'] for u in user if u['name'] == 'Mary']
+print(a[0])
