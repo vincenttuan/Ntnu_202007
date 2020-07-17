@@ -1,10 +1,12 @@
-import math
+from math import radians, cos, sin, asin, sqrt
 # 師大圖書館校區 25.027951, 121.528596
-def cal_dis_meters(latitude1, longitude1,latitude2, longitude2):
-    radius = 6378.137
-    radLat1 = (math.pi/180)*latitude1
-    radLat2 = (math.pi/180)*latitude2  
-    radLng1 = (math.pi/180)*longitude1  
-    radLng2= (math.pi/180)*longitude2  
-    d=2.0*math.asin(math.sqrt(math.pow(math.sin((radLat1-radLat2)/2.0),2)+math.cos(radLat1)*math.cos(radLat2)*math.pow(math.sin((radLng1-radLng2)/2.0),2)))*radius
-    return d
+def cal_dis_meters(lon1, lat1, lon2, lat2): # 經度1，緯度1，經度2，緯度2）
+    # 轉弧度
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+    # 半正矢 haversine 公式
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a))
+    r = 6371 # 地球平均半徑(公里)
+    return c * r * 1000 # 單位公尺
