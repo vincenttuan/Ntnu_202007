@@ -8,8 +8,9 @@ def getWeather(city):
     # 分析 json
     data = json.loads(resp.text)
     main = data['list'][0]['main']
-    return main['temp'], main['feels_like'], main['humidity']
+    description = data['list'][0]['weather'][0]['description']
+    return main['temp'], main['feels_like'], main['humidity'], description
 
 if '__main__' == __name__ :
-    temp, feels_like, humidity = getWeather('Taipei')
-    print("溫度: %.2f 體感: %.2f 濕度: %d %%" % (temp, feels_like, humidity))
+    temp, feels_like, humidity, description = getWeather('Taipei')
+    print("溫度: %.2f 體感: %.2f 濕度: %d %% %s" % (temp, feels_like, humidity, description))
