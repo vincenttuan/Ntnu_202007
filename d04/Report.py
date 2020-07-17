@@ -1,0 +1,8 @@
+file = open('report.txt', 'r', encoding='utf-8')
+data = file.read()
+print(data)
+shares = int(data[10:14])
+cost = float(data[22:27])
+price = float(data[38:41])
+bal = shares * (price - cost)
+print("賺" if bal >= 0 else "賠", bal)
