@@ -1,5 +1,5 @@
 # 讀取檔案
-file = open('user.txt', 'r')
+file = open('user.csv', 'r')
 list = file.readlines()
 file2 = open('result.txt', 'w', encoding='UTF-8')
 for data in list:
