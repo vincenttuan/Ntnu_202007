@@ -1,5 +1,5 @@
 import math
-
+# 師大圖書館校區 25.027951, 121.528596
 def cal_dis_meters(latitude1, longitude1,latitude2, longitude2):
     radius = 6378.137
     radLat1 = (math.pi/180)*latitude1
