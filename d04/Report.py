@@ -6,3 +6,6 @@ cost = float(data[22:27])
 price = float(data[38:41])
 bal = shares * (price - cost)
 print("賺" if bal >= 0 else "賠", bal)
+
+nums = ''.join([x for x in data if x.isdigit()])
+print(nums)
