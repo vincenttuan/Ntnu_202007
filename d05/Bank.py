@@ -3,10 +3,19 @@ class Account:
     balnce = 0    # 餘額
 
     def save(self, money):  # 存款方法
-        self.balnce += money
+        if(money > 0):
+            self.balnce += money
+        else:
+            print('存款金額錯誤')
 
     def withdraw(self, money):  # 提款方法
-        self.balnce -= money
+        if (money > 0):
+            if(money <= self.balnce):
+                self.balnce -= money
+            else:
+                print('餘額不足')
+        else:
+            print('提款金額錯誤')
 
     def printAct(self):  # 查詢餘額
         print("%s 帳戶餘額: %d" % (self.actName, self.balnce))
