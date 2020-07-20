@@ -17,6 +17,7 @@ class Score:
 
     def __str__(self) -> str:
         return str(sum(self.scores.values()))
+        #return str(self.scores.keys())
 
 
 if __name__ == '__main__' :
