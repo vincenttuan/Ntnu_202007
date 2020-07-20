@@ -8,7 +8,12 @@ class Ostrich(Bird):
         #super().move()
         print("不會飛但會跑")
 
+# 多型操作
+def printMove(animal):
+    animal.move()
 
 if __name__ == '__main__':
-    o = Ostrich()
-    o.move()
+    a = Bird()
+    b = Ostrich()
+    printMove(a)
+    printMove(b)
