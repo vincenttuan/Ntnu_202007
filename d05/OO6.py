@@ -21,6 +21,11 @@ class BMI :
         w = self.__w
         return w / ((h/100)**2)
 
+    def __str__(self) -> str:
+        return '%s 身高:%.1f 體重:%.1f BMI:%.2f' % (self.name, self.__h, self.__w, self.getBMI())
+
+
 if __name__ == '__main__':
     bmi = BMI('Anita', 165, 48)
     print(bmi.getBMI())
+    print(bmi)
