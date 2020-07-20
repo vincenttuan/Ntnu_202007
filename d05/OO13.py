@@ -9,9 +9,18 @@ class Score:
     def __len__(self):
         return len(self.scores)
 
+    def __getitem__(self, key):
+        return self.scores[key]
+
+    def __delitem__(self, key):
+        del self.scores[key]
+
 if __name__ == '__main__' :
     s = Score('英文', 80)
     s['國文'] = 60
     s['數學'] = 70
     print(s.scores)
     print(len(s))
+    print(s['國文'])
+    del s['國文']
+    print(s.scores)
