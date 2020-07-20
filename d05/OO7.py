@@ -11,6 +11,11 @@ class Student(Human):
     def __str__(self) -> str:
         return super().__str__() + " number=%d grade=%s" % (self.number, self.grade)
 
+class Teacher(Human):
+    salary = 0
+    def __str__(self) -> str:
+        return super().__str__() + " salary=%d " % (self.salary)
+
 if __name__ == '__main__':
     student = Student()
     student.name = 'Vincent'
@@ -19,3 +24,9 @@ if __name__ == '__main__':
     student.number = 1
     student.grade = '一年級'
     print(student)
+    teacher = Teacher()
+    teacher.name = 'Anita'
+    teacher.age = 40
+    teacher.sex = '女'
+    teacher.salary = 120000
+    print(teacher)
