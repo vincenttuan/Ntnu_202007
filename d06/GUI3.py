@@ -4,7 +4,7 @@ from tkinter import messagebox
 
 def msg():
     temp, feels_like, humidity, description = w.getWeather('taipei')
-    mystr.set("%.2f C" % (temp-273.15))
+    mystr.set("氣溫: %.2f C\n體感: %.2f C\n濕度: %d %%\n%s" % (temp-273.15, feels_like-273.15, humidity, description))
 
 def quit():
     win.quit()
