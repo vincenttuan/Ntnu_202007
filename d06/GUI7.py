@@ -2,7 +2,7 @@ import tkinter
 from tkinter import font
 # using grid
 # +------+-------------+
-# | btn1 | btn2 |
+# | btn1 |     btn2    |
 # +------+------+------+
 # | btn3 | btn3 | btn4 |
 # +-------------+------+
