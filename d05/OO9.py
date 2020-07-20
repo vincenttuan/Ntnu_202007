@@ -23,10 +23,13 @@ class Motor(Engine, Wheel):
 
     def __init__(self, power, count, name) -> None:
         super().__init__(power)
-        Wheel.__init__(count)
+        Wheel.__init__(self, count)
         self.name = name
 
     def __str__(self) -> str:
-        return super().__str__() + Wheel.__str__() + "%s" % self.name
+        return super().__str__() + Wheel.__str__(self) + ("%s" % self.name)
 
 
+if __name__ == '__main__' :
+    car = Motor(6000, 4, '汽車')
+    print(car)
