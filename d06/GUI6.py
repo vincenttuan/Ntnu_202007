@@ -1,7 +1,7 @@
 import tkinter
 
 def getValue(args):
-    value = scale.get() # 或使用 args
+    value = scale.get() # 或使用 int(args)
     mystr.set(str(value/100) + ", " + args)
 
 win = tkinter.Tk()
