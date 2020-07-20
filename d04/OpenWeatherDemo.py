@@ -2,8 +2,8 @@ import requests
 import json
 
 def getWeather(city):
-    #apikey = open('api.key', 'r').read()
-    apikey = '5b683d3872361d3b14e7df105df6a27d'
+    apikey = open('../d04/api.key', 'r').read()
+    #apikey = '5b683d3872361d3b14e7df105df6a27d'
     path = 'https://api.openweathermap.org/data/2.5/find?q=%s&appid=%s'
     resp = requests.get(path % (city, apikey))
     # 分析 json
