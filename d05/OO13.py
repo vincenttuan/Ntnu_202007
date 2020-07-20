@@ -15,6 +15,10 @@ class Score:
     def __delitem__(self, key):
         del self.scores[key]
 
+    def __str__(self) -> str:
+        return str(sum(self.scores.values()))
+
+
 if __name__ == '__main__' :
     s = Score('英文', 80)
     s['國文'] = 60
@@ -24,3 +28,4 @@ if __name__ == '__main__' :
     print(s['國文'])
     del s['國文']
     print(s.scores)
+    print(s)
