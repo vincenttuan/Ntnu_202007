@@ -12,4 +12,12 @@ if __name__ == '__main__':
     h.name = 'Vincent'
     h.age = 18
     h.sex = '男'
+    h2 = Human()
+    h2.name = 'Anita'
+    h2.age = 19
+    h2.sex = '女'
     print(h)
+    print(h2)
+    list = [h, h2]
+    for h in list:
+        print(h)
