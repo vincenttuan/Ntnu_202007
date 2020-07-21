@@ -1,6 +1,6 @@
 import requests
 
-file = open('BWIBBU_d.csv', 'r')
+file = open('BWIBBU_d.csv', 'r', encoding='utf-8')
 data = file.read()
 
 # 資料整理
