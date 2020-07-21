@@ -9,5 +9,11 @@ data = data.replace('"-"', '-1')
 data = data.replace('"', '')
 for d in data.split("\n"):
     list = d.split(",")
-    if len(list) == 8:
-        print(d)
+    # 表頭
+    if list[0] == '證券代號':
+        print(list)
+    # 表身
+    if len(list) == 8 and list[0] != '證券代號':
+        # 資料分析
+        if float(list[4]) < 10 and float(list[4]) > 0:
+            print(list)
