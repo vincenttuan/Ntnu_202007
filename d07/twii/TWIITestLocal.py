@@ -15,5 +15,7 @@ for d in data.split("\n"):
     # 表身
     if len(list) == 8 and list[0] != '證券代號':
         # 資料分析
-        if float(list[4]) < 10 and float(list[4]) > 0:
+        if float(list[4]) < 10 and float(list[4]) > 0 \
+                and float(list[5]) < 1 \
+                and float(list[2]) > 7:
             print(list)
