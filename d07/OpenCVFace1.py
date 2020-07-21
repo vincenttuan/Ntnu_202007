@@ -22,6 +22,9 @@ while True:
     # 定義灰度圖像 (cvtColor 讓影像在不同色彩空間中轉換)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
+    # 鏡向
+    # gray = cv2.flip(gray, 1)
+
     # 畫出每一個臉的範圍
     faces = face_cascade.detectMultiScale(
         gray,  # 待檢測圖片，一般為灰度圖像加快檢測速度
