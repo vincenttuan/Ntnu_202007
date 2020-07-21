@@ -3,7 +3,7 @@ import cv2
 facePath = "./xml/haarcascade_frontalface_alt.xml"
 faceCascade = cv2.CascadeClassifier(facePath)
 
-img = cv2.imread("./image/what.jpg")
+img = cv2.imread("./image/test.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = faceCascade.detectMultiScale(
