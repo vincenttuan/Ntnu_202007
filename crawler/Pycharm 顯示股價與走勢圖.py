@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-site = "https://query1.finance.yahoo.com/v8/finance/chart/2330.TW?period1=0&period2=1549258857&interval=1d&events=history&=hP2rOschxO0"
+site = "https://query1.finance.yahoo.com/v8/finance/chart/2330.TW?"
 response = requests.get(site)
 
 data = json.loads(response.text)
