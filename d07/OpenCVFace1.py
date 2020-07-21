@@ -18,12 +18,11 @@ while True:
     # 捕捉 frame-by-frame
     ret, frame = cap.read()  # ret : 讀到的 frame 是正確的化會回傳 true
     print(frame)
+    # 鏡向
+    frame = cv2.flip(frame, 1)
 
     # 定義灰度圖像 (cvtColor 讓影像在不同色彩空間中轉換)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    # 鏡向
-    # gray = cv2.flip(gray, 1)
 
     # 畫出每一個臉的範圍
     faces = face_cascade.detectMultiScale(
@@ -46,6 +45,7 @@ while True:
         cv2.putText(frame, 'Vincent', (x, y-7), 2, 1.2, (0, 255, 255), 2)
 
     # 將 frame 顯示
+
     cv2.imshow('Video', frame)
 
     # 按下 q 離開迴圈 (「1」表示停 1ms 來偵測是否使用者有按下q。若設定為「0」就表示持續等待至使用者按下按鍵為止)
