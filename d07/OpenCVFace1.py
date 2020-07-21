@@ -19,6 +19,9 @@ while True:
     ret, frame = cap.read()  # ret : 讀到的 frame 是正確的化會回傳 true
     print(frame)
 
+    # 定義灰度圖像 (cvtColor 讓影像在不同色彩空間中轉換)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
     # 將 frame 顯示
     cv2.imshow('Video', frame)
 
