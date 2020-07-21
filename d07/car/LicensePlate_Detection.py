@@ -7,7 +7,7 @@ carCascade = cv2.CascadeClassifier(carPath)
 # smilePath = "./xml/haarcascade_smile.xml"
 # smileCascade = cv2.CascadeClassifier(smilePath)
 
-img = cv2.imread("./image/car3.jpg")
+img = cv2.imread("./image/car2.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 cars = carCascade.detectMultiScale(
