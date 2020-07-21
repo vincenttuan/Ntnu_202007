@@ -36,6 +36,12 @@ while True:
         # CASCADE_DO_ROUGH_SEARCH=8 粗略的檢測
     )
 
+    # 在臉部周圍畫矩形框
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 5)  # 注意：(0, 255, 0) 是 BGR
+        # 繪文字
+        cv2.putText(frame, 'Vincent', (x, y - 7), 2, 1.2, (0, 255, 0), 2)
+
     # 將 frame 顯示
     cv2.imshow('Video', frame)
 
